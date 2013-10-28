@@ -1,11 +1,16 @@
 <?php
-	if ( isset($_FILES['xform']) && $_FILES['xform']['size'] > 0) {
+
+	//get the xform source
+	$source = (isset($_FILES['xform']) && $_FILES['xform']['size'] > 0) ? $_FILES['xform']['tmp_name'] : $_GET['xform'];
+	
+	if ( $source ) {
+
 		$xform = new DOMDocument();
 		$form_xsl = new DOMDocument();
 		$model_xsl = new DOMDocument();
 
 		//load files
-		$xform->load($_FILES['xform']['tmp_name']);
+		$xform->load($source);
 		$form_xsl->load('lib/openrosa2html5form_php5.xsl');
 		$model_xsl->load('lib/openrosa2xmlmodel.xsl');
 
