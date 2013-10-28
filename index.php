@@ -1,4 +1,7 @@
 <?php
+	
+	//allow cross-domain requests
+	header('Access-Control-Allow-Origin: *');
 
 	//get the xform source
 	$source = (isset($_FILES['xform']) && $_FILES['xform']['size'] > 0) ? $_FILES['xform']['tmp_name'] : $_GET['xform'];
