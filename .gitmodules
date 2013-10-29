@@ -1,3 +1,3 @@
-[submodule "lib"]
-	path = lib
-	url = https://github.com/MartijnR/enketo-xslt.git
+[submodule "lib/xsl"]
+	path = lib/xsl
+	url = https://github.com/MartijnR/enketo-xslt

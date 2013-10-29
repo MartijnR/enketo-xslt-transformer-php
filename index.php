@@ -14,8 +14,8 @@
 
 		//load files
 		$xform->load($source);
-		$form_xsl->load('lib/openrosa2html5form_php5.xsl');
-		$model_xsl->load('lib/openrosa2xmlmodel.xsl');
+		$form_xsl->load('lib/xsl/openrosa2html5form_php5.xsl');
+		$model_xsl->load('lib/xsl/openrosa2xmlmodel.xsl');
 
 		//get HTML Form transformation result
 		$proc = new XSLTProcessor();
