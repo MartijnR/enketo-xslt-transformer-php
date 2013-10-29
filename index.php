@@ -18,13 +18,16 @@
 		$model_xsl->load('lib/openrosa2xmlmodel.xsl');
 
 		//get HTML Form transformation result
-		$proc = new XSLTProcessor;
+		$proc = new XSLTProcessor();
 		$proc->importStyleSheet($form_xsl);
 		$form = simplexml_load_string($proc->transformToXML($xform));
 
 		//get XML Model transformation result
+		$proc = new XSLTProcessor();
 		$proc->importStyleSheet($model_xsl);
 		$model = simplexml_load_string($proc->transformToXML($xform));
+
+		//combine the results
 		$result = new SimpleXMLElement('<root>'.$model->model->asXML().$form->form->asXML().'</root>');
 		
 		//output result
