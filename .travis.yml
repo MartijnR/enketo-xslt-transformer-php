@@ -1,8 +1,9 @@
 before_install:
   - git submodule update --init --recursive
-  - sudo apt-get install php5 php5-xsl
+  - sudo apt-get update
+  - sudo apt-get install php5-xsl
 language: node_js
 node_js:
-  - "0.10"
+  - "0.11"
 before_script:
   - npm install -g grunt-cli
