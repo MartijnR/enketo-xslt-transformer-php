@@ -1,4 +1,4 @@
-enketo-xslt-transformer-php
+enketo-xslt-transformer-php [![Build Status](https://travis-ci.org/MartijnR/enketo-xslt-transformer-php.png)](https://travis-ci.org/MartijnR/enketo-xslt-transformer-php)
 ===========================
 
 Enketo XForm -> HTML Form transformer using XSLT
@@ -21,7 +21,9 @@ See this beauty live at [http://xslt-dev.enketo.org/](http://xslt-dev.enketo.org
 1. `apt-get install php5 php5-xsl git`
 2. clone this repo `git clone https://github.com/MartijnR/enketo-xslt-transformer-php`
 3. `git submodule update --init`
-4. Apache or Nginx configuration
+4. use the built-in webserver for development after installing node.js, npm and running `npm install` and `grunt server`
+5. or use e.g. Apache or Nginx
+6. run tests with `grunt test`
 
 ###Usage
 
