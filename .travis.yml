@@ -2,6 +2,7 @@ before_install:
   - git submodule update --init --recursive
   - sudo apt-get update
   - sudo apt-get install php5-xsl
+  - sudo apt-get install libfontconfig
 language: node_js
 node_js:
   - "0.11"
