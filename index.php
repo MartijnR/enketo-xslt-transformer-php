@@ -4,7 +4,10 @@
 	header('Access-Control-Allow-Origin: *');
 
 	//get the xform source
-	$source = (isset($_FILES['xform']) && $_FILES['xform']['size'] > 0) ? $_FILES['xform']['tmp_name'] : $_GET['xform'];
+	$source = (isset($_FILES['xform']) && $_FILES['xform']['size'] > 0) 
+		? $_FILES['xform']['tmp_name'] 
+		: ( isset($_GET['xform'])
+			? $_GET['xform'] : NULL );
 	
 	if ( $source ) {
 
