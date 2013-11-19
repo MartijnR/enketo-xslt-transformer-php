@@ -1,9 +1,9 @@
 before_install:
   - git submodule update --init --recursive
-  - npm install -g grunt-cli
-  - npm install
 language: php
 node_js:
-  - 5.5
   - 5.4
-script: "npm test"
+script: 
+  - npm install 
+  - npm install -g grunt-cli
+  - npm test
