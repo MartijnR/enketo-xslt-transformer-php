@@ -1,4 +1,11 @@
-var xforms = ['Basic-with-jr-meta.xml', 'Basic-with-meta.xml', 'Basic-no-meta.xml', 'Basic-with-meta-no-id.xml', 'Basic-meta-wrong-location.xml'];
+var xforms = [
+    'Basic-with-jr-meta.xml',
+    'Basic-with-meta.xml',
+    'Basic-no-meta.xml',
+    'Basic-with-meta-no-id.xml',
+    'Basic-meta-wrong-location.xml',
+    'widgets-dev.xml'
+];
 
 
 describe("XSL Transformation outputs for the model", function() {
