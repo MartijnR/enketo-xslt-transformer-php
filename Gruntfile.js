@@ -16,7 +16,9 @@ module.exports = function(grunt) {
             },
             test: {
                 options: {
-                    port: 8000
+                    port: 8000,
+                    hostname: '127.0.0.0',
+                    bin: 'php'
                 }
             }
         },
