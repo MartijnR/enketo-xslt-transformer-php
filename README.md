@@ -24,6 +24,7 @@ See this beauty live at [http://xslt-dev.enketo.org/](http://xslt-dev.enketo.org
 4. use the built-in webserver for development after installing node.js, npm and running `npm install` and `grunt server`
 5. or use e.g. Apache or Nginx
 6. run tests with `grunt test`
+7. simply drop an XForm in test/form to include all tests on that form!
 
 ###Usage
 
