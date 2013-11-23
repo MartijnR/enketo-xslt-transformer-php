@@ -1,3 +1,6 @@
 [submodule "lib/xsl"]
 	path = lib/xsl
 	url = https://github.com/MartijnR/enketo-xslt
+[submodule "test/lib/jquery-xpath"]
+	path = test/lib/jquery-xpath
+	url = https://github.com/MartijnR/jquery-xpath.git

@@ -25,9 +25,10 @@ module.exports = function(grunt) {
                 src: 'src/js/**/*.js',
                 options: {
                     specs: 'test/spec/**/*.js',
-                    helpers: ['test/util/**/*.js', 'test/lib/*.js', 'test/lib/*/*.js'],
+                    helpers: ['test/util/**/*.js', 'test/lib/jquery-xpath/jquery.xpath.js'],
                     host: 'http://127.0.0.1:8000/',
-                    keepRunner: true
+                    keepRunner: true,
+                    vendor: ['http://codeorigin.jquery.com/jquery-2.0.3.min.js']
                 }
             }
         },
