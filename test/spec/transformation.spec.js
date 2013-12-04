@@ -176,11 +176,11 @@
 
                 for (var i = 0; i < paths.length; i++) {
                     if (result.$model.xfind(paths[i]).length < 1) {
-                        misses.push('Name attribute of form node: ' + paths[i] + ' has no corresponding model node.');
+                        misses.push('Name attribute of form node: ' + paths[i] + ' has no corresponding model node');
                     }
                 }
 
-                it("each form control has a matching data node", function() {
+                it("each form control has a matching data node for: " + result.name, function() {
                     expect(misses.join(', ')).toEqual('');
                 });
             }
