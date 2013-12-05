@@ -192,4 +192,6 @@
             }
         }
     });
+
+    //TODO: add test for https://github.com/MartijnR/enketo-xslt/issues/12
 }());
