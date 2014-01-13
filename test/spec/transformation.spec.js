@@ -88,7 +88,7 @@
                         //remove those bindings that ONLY apply to outputs
                         return result.$xform.find('[ref="' + nodeset + '"]').length !== 0 || $(this).attr('calculate') || $(this).attr('jr:preload');
                     }).length,
-                    relH = countInputsForm(result.$form, '[data-relevant]');
+                    relH = countInputsForm(result.$form, '[data-relevant]') + result.$form.find('.or-group[data-relevant], .or-group-data[data-relevant]').length;
                 it("contains the correct number of relevant logic for: " + result.name, function() {
                     expect(relH).toEqual(relX);
                 });
@@ -115,8 +115,8 @@
                 });
             },
             function testCalculates(result) {
-                var calcX = result.$xform.find('[calculate]').length,
-                    calcH = result.$form.find('[data-calculate]').length;
+                var calcX = countBindsXform(result.$xform, '[calculate]'),
+                    calcH = countInputsForm(result.$form, '[data-calculate]'); //result.$form.find('[data-calculate]').length;
                 it("contains the correct number of calculated items for: " + result.name, function() {
                     expect(calcH).toEqual(calcX);
                 });
@@ -131,7 +131,7 @@
             function testNotRadioCheckbox(result) {
                 var inputX = result.$xform.find('input, upload').length,
                     inputH = result.$form.find('textarea, input:not([type="radio"], [type="checkbox"])').length,
-                    preloadCalculateH = result.$form.find('#or-preload-items input:not([data-calculate]), [data-calculate]').length;
+                    preloadCalculateH = result.$form.find('#or-preload-items input:not([data-calculate]), #or-calculated-items [data-calculate]').length;
                 it("contains the correct number of non-radio and non-checkbox inputs for: " + result.name, function() {
                     expect(inputH - preloadCalculateH).toEqual(inputX);
                 });

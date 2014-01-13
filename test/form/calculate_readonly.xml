@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Calculate Readonly</h:title>
+    <model>
+      <instance>
+        <calculate_readonly id="calculate_readonly">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <a/>
+          <b/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </calculate_readonly>
+      </instance>
+      <bind nodeset="/calculate_readonly/a" type="int"/>
+      <bind calculate="'/calculate_readonly/a'" nodeset="/calculate_readonly/b" readonly="true()" type="int"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/calculate_readonly/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'aea7ad2055c5475bba30f8042bb8ae42'" nodeset="/calculate_readonly/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/calculate_readonly/a">
+      <label>enter a number</label>
+    </input>
+    <input ref="/calculate_readonly/b">
+      <label>the number entered</label>
+    </input>
+  </h:body>
+</h:html>

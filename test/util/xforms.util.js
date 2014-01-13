@@ -14,8 +14,10 @@ var xforms = [
 	"test/form/TestTrigger.xml",
 	"test/form/bench5.xml",
 	"test/form/bench7.xml",
+	"test/form/calculate_readonly.xml",
 	"test/form/gui_test_A.xml",
 	"test/form/nested_repeats.xml",
 	"test/form/new_cascading_selections.xml",
+	"test/form/readonly.xml",
 	"test/form/widgets-dev.xml"
 ];

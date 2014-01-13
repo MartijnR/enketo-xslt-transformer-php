@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Readonly cases</h:title>
+    <model>
+      <instance>
+        <readonly id="readonly">
+          <formhub>
+            <uuid/>
+          </formhub>
+          <empty>
+            <intro/>
+            <integer/>
+            <decimal/>
+            <text/>
+            <date/>
+            <datetime/>
+            <time/>
+            <select1/>
+            <select/>
+          </empty>
+          <calculated>
+            <intro_val/>
+            <integer_val/>
+            <decimal_val/>
+            <text_val/>
+            <date_val/>
+            <datetime_val/>
+            <time_val/>
+            <select1_val/>
+            <select_val/>
+          </calculated>
+          <default>
+            <intro_def>hey</intro_def>
+            <integer_def>10</integer_def>
+            <decimal_def>10.1</decimal_def>
+            <text_def>hey</text_def>
+            <date_def>today()</date_def>
+            <datetime_def>now()</datetime_def>
+            <time_def>now()</time_def>
+            <select1_def>2</select1_def>
+            <select_def>2</select_def>
+          </default>
+          <meta>
+            <instanceID/>
+          </meta>
+        </readonly>
+      </instance>
+      <bind nodeset="/readonly/empty/intro" readonly="true()" type="string"/>
+      <bind nodeset="/readonly/empty/integer" readonly="true()" type="int"/>
+      <bind nodeset="/readonly/empty/decimal" readonly="true()" type="decimal"/>
+      <bind nodeset="/readonly/empty/text" readonly="true()" type="string"/>
+      <bind nodeset="/readonly/empty/date" readonly="true()" type="date"/>
+      <bind nodeset="/readonly/empty/datetime" readonly="true()" type="dateTime"/>
+      <bind nodeset="/readonly/empty/time" readonly="true()" type="time"/>
+      <bind nodeset="/readonly/empty/select1" readonly="true()" type="select1"/>
+      <bind nodeset="/readonly/empty/select" readonly="true()" type="select"/>
+      <bind calculate="'hey'" nodeset="/readonly/calculated/intro_val" readonly="true()" type="string"/>
+      <bind calculate="10" nodeset="/readonly/calculated/integer_val" readonly="true()" type="int"/>
+      <bind calculate="10.1" nodeset="/readonly/calculated/decimal_val" readonly="true()" type="decimal"/>
+      <bind calculate="'hey'" nodeset="/readonly/calculated/text_val" readonly="true()" type="string"/>
+      <bind calculate="today()" nodeset="/readonly/calculated/date_val" readonly="true()" type="date"/>
+      <bind calculate="now()" nodeset="/readonly/calculated/datetime_val" readonly="true()" type="dateTime"/>
+      <bind calculate="now()" nodeset="/readonly/calculated/time_val" readonly="true()" type="time"/>
+      <bind calculate="2" nodeset="/readonly/calculated/select1_val" readonly="true()" type="select1"/>
+      <bind calculate="2" nodeset="/readonly/calculated/select_val" readonly="true()" type="select"/>
+      <bind nodeset="/readonly/default/intro_def" readonly="true()" type="string"/>
+      <bind nodeset="/readonly/default/integer_def" readonly="true()" type="int"/>
+      <bind nodeset="/readonly/default/decimal_def" readonly="true()" type="decimal"/>
+      <bind nodeset="/readonly/default/text_def" readonly="true()" type="string"/>
+      <bind nodeset="/readonly/default/date_def" readonly="true()" type="date"/>
+      <bind nodeset="/readonly/default/datetime_def" readonly="true()" type="dateTime"/>
+      <bind nodeset="/readonly/default/time_def" readonly="true()" type="time"/>
+      <bind nodeset="/readonly/default/select1_def" readonly="true()" type="select1"/>
+      <bind nodeset="/readonly/default/select_def" readonly="true()" type="select"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/readonly/meta/instanceID" readonly="true()" type="string"/>
+      <bind calculate="'dcb230221a7345e5946dc116bd921751'" nodeset="/readonly/formhub/uuid" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group ref="/readonly/empty">
+      <label>empty readonly inputs</label>
+      <input ref="/readonly/empty/intro">
+        <label>note</label>
+      </input>
+      <input ref="/readonly/empty/integer">
+        <label>integer</label>
+      </input>
+      <input ref="/readonly/empty/decimal">
+        <label>decimal</label>
+      </input>
+      <input ref="/readonly/empty/text">
+        <label>text</label>
+      </input>
+      <input ref="/readonly/empty/date">
+        <label>date</label>
+      </input>
+      <input ref="/readonly/empty/datetime">
+        <label>datetime</label>
+      </input>
+      <input ref="/readonly/empty/time">
+        <label>time</label>
+      </input>
+      <select1 ref="/readonly/empty/select1">
+        <label>select_one yes_no</label>
+        <item>
+          <label>strongly disagree</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>disagree</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>neither agree nor disagree</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>agree</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>strongly agree</label>
+          <value>5</value>
+        </item>
+      </select1>
+      <select ref="/readonly/empty/select">
+        <label>select_multiple yes_no</label>
+        <item>
+          <label>strongly disagree</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>disagree</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>neither agree nor disagree</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>agree</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>strongly agree</label>
+          <value>5</value>
+        </item>
+      </select>
+    </group>
+    <group ref="/readonly/calculated">
+      <label>readonly inputs with calculated value</label>
+      <input ref="/readonly/calculated/intro_val">
+        <label>note with value</label>
+      </input>
+      <input ref="/readonly/calculated/integer_val">
+        <label>integer with value</label>
+      </input>
+      <input ref="/readonly/calculated/decimal_val">
+        <label>decimal with value</label>
+      </input>
+      <input ref="/readonly/calculated/text_val">
+        <label>text with value</label>
+      </input>
+      <input ref="/readonly/calculated/date_val">
+        <label>date with value</label>
+      </input>
+      <input ref="/readonly/calculated/datetime_val">
+        <label>datetime with value</label>
+      </input>
+      <input ref="/readonly/calculated/time_val">
+        <label>time with value</label>
+      </input>
+      <select1 ref="/readonly/calculated/select1_val">
+        <label>select_one with value</label>
+        <item>
+          <label>strongly disagree</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>disagree</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>neither agree nor disagree</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>agree</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>strongly agree</label>
+          <value>5</value>
+        </item>
+      </select1>
+      <select ref="/readonly/calculated/select_val">
+        <label>select_multiple with value</label>
+        <item>
+          <label>strongly disagree</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>disagree</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>neither agree nor disagree</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>agree</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>strongly agree</label>
+          <value>5</value>
+        </item>
+      </select>
+    </group>
+    <group ref="/readonly/default">
+      <label>readonly input with default value</label>
+      <input ref="/readonly/default/intro_def">
+        <label>note with default value</label>
+      </input>
+      <input ref="/readonly/default/integer_def">
+        <label>integer with default value</label>
+      </input>
+      <input ref="/readonly/default/decimal_def">
+        <label>decimal with default value</label>
+      </input>
+      <input ref="/readonly/default/text_def">
+        <label>text with default value</label>
+      </input>
+      <input ref="/readonly/default/date_def">
+        <label>date with default value</label>
+      </input>
+      <input ref="/readonly/default/datetime_def">
+        <label>datetime with default value</label>
+      </input>
+      <input ref="/readonly/default/time_def">
+        <label>time with default value</label>
+      </input>
+      <select1 ref="/readonly/default/select1_def">
+        <label>select_one with default value</label>
+        <item>
+          <label>strongly disagree</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>disagree</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>neither agree nor disagree</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>agree</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>strongly agree</label>
+          <value>5</value>
+        </item>
+      </select1>
+      <select ref="/readonly/default/select_def">
+        <label>select_multiple with default value</label>
+        <item>
+          <label>strongly disagree</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>disagree</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>neither agree nor disagree</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>agree</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>strongly agree</label>
+          <value>5</value>
+        </item>
+      </select>
+    </group>
+  </h:body>
+</h:html>
