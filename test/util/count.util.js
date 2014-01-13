@@ -1,7 +1,7 @@
 //counts a group of radiobuttons and checkboxes as one
 function countInputsForm($form, selector) {
     var $nonRadioCheck = $form.find(selector + ':not([type="radio"], [type="checkbox"])'),
-        $radioCheck = $form.find(selector + '[type="radio"], ' + selector + '[type="checkbox"]').parent().parent('fieldset');
+        $radioCheck = $form.find(selector + '[type="radio"], ' + selector + '[type="checkbox"]').closest('.question');
     return $nonRadioCheck.length + $radioCheck.length;
 }
 
