@@ -1,20 +1,14 @@
-enketo-xslt-transformer-php [![Build Status](https://travis-ci.org/MartijnR/enketo-xslt-transformer-php.png)](https://travis-ci.org/MartijnR/enketo-xslt-transformer-php)
+enketo-xslt-transformer-php [![Build Status](https://travis-ci.org/enketo/enketo-xslt-transformer-php.png)](https://travis-ci.org/enketo/enketo-xslt-transformer-php)
 ===========================
 
-Enketo XForm -> HTML Form transformer using XSLT
+Enketo XForm to HTML Form transformer using XSLT
 
 Not meant for production. Just a simple demo that can be used for development on enketo-core. 
-See this beauty live at [http://xslt-dev.enketo.org/](http://xslt-dev.enketo.org/). Again, don't use for production. It is slow, unsafe, and doesn't handle errors...
+It is slow, unsafe, and doesn't handle errors...
 
 ###Related Projects
 
-* [enketo-core](https://github.com/MartijnR/enketo-core) - the engine that powers Enketo Smart Paper
-* [XPathJS_javarosa](https://github.com/MartijnR/xpathjs_javarosa) - used inside this repo
-* [enketo-xslt](https://github.com/MartijnR/enketo-xslt)
-* [enketo-xslt-transformer-node] - To follow
-* [enketo-dristhi](https://github.com/MartijnR/enketo-dristhi)
-* [file-manager](https://github.com/MartijnR/file-manager)
-* [openrosa-forms](https://github.com/MartijnR/openrosa-forms) - bunch of test forms, for development
+* [enketo-transformer](https://github.com/enketo/enketo-transformer) - NodeJS Enketo XSLT transformer
 
 ###Installation
 
